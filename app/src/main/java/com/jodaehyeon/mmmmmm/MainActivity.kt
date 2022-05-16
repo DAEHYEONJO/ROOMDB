@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         object : ViewModelProvider.Factory {
             override fun <T : ViewModel?> create(modelClass: Class<T>): T {
                 return UserViewModel(GlobalApplication.userRepository) as T
+                //ADFAFSDF
             }
         }
     }
