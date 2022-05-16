@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        Log.d("lifecycletest", "MainActivity onCreate: ")
 
         binding.run {
             btn1.setOnClickListener {
@@ -41,5 +42,35 @@ class MainActivity : AppCompatActivity() {
             binding.txt1.text = user.toString()
         }
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d("lifecycletest", "MainActivity onStart: ")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("lifecycletest", "MainActivity onResume: ")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("lifecycletest", "MainActivity onPause: ")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("lifecycletest", "MainActivity onStop: ")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("lifecycletest", "MainActivity onDestroy: ")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d("lifecycletest", "MainActivity onRestart: ")
     }
 }
