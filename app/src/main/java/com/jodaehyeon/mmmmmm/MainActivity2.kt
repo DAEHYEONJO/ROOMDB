@@ -6,6 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.jodaehyeon.mmmmmm.databinding.ActivityMain2Binding
 
+//1. ListView
+//2. RecyclerView
+//3. DiffUtil
+
 class MainActivity2 : AppCompatActivity() {
     lateinit var binding: ActivityMain2Binding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,11 +17,6 @@ class MainActivity2 : AppCompatActivity() {
         binding = ActivityMain2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btn2.setOnClickListener {
-            val intent = Intent()
-            intent.putExtra("info","abcd")
-            setResult(Activity.RESULT_OK,intent)
-            finish()
-        }
+
     }
 }
